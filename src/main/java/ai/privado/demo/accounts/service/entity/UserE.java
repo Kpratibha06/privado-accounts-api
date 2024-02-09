@@ -18,6 +18,9 @@ public class UserE extends BaseE {
 	@Column(name = "EMAIL", length = 200)
 	private String email;
 
+	@Column(name = "Device_ID", length = 200)
+	private String deviceid;
+
 	@Column(name = "PHONE", length = 200)
 	private String phone;
 
