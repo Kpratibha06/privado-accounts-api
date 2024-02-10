@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SignupD {
-	@JsonProperty("first_name")
-	private String firstname;
+	@JsonProperty("user_name")
+	private String username;
 	@JsonProperty("last_name")
 	private String lastName;
 	private String email;
@@ -14,12 +14,12 @@ public class SignupD {
 	private String password;
 	private String dob;
 
-	public String getFirstName() {
-		return firstName;
+	public String getuserName() {
+		return userName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setuserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getLastName() {
@@ -50,8 +50,8 @@ public class SignupD {
 		return password;
 	}
 
-	public void setfirstname(String firstname) {
-		this.firstname = firstname;
+	public void setusername(String username) {
+		this.username = username;
 	}
 
 	public String getDob() {
