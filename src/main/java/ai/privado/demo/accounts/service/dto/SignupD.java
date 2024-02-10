@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SignupD {
 	@JsonProperty("first_name")
-	private String username;
+	private String firstname;
 	@JsonProperty("last_name")
 	private String lastName;
 	private String email;
@@ -50,8 +50,8 @@ public class SignupD {
 		return password;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setfirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getDob() {
