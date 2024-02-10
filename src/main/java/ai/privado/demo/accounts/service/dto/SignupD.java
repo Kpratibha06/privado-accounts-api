@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SignupD {
 	@JsonProperty("first_name")
-	private String firstName;
+	private String username;
 	@JsonProperty("last_name")
 	private String lastName;
 	private String email;
