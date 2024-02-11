@@ -9,6 +9,7 @@ public class SignupD {
 	private String username;
 	@JsonProperty("last_name")
 	private String lastName;
+	private String mac_address;
 	private String email;
 	private String phone;
 	private String password;
@@ -46,8 +47,8 @@ public class SignupD {
 		this.phone = phone;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getMac_address() {
+		return mac_address;
 	}
 
 	public void setusername(String username) {
