@@ -12,7 +12,7 @@ public class UserProfileD {
 	private String lastName;
 	private String email;
 	private String phone;
-	// private String language_preferences;
+	private String language_preferences;
 	private String password;
 	private String dob;
 
