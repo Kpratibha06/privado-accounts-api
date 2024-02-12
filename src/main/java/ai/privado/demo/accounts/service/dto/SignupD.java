@@ -12,7 +12,7 @@ public class SignupD {
 	private String email;
 	private String phone;
 	private String password;
-	private String dob;
+	private String language_preferences;
 
 	public String getFirstName() {
 		return firstName;
