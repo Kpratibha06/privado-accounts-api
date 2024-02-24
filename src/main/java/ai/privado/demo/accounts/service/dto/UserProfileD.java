@@ -11,7 +11,7 @@ public class UserProfileD {
 	@JsonProperty("last_name")
 	private String lastName;
 	private String email;
-	private String phone;
+	private String language_prefrences;
 	// private String language_preferences;
 	private String password;
 	private String dob;
@@ -52,8 +52,8 @@ public class UserProfileD {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setlanguage_prefrences(String language_prefrences) {
+		this.language_prefrences = language_prefrences;
 	}
 
 	public String getPassword() {
