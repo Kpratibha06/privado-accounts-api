@@ -8,11 +8,19 @@ public class SGEMailD {
 	private String emailid;
 	private String subject;
 	private String msgBody;
+	private String voice;
 
 	public String getEmailid() {
 		return emailid;
 	}
+	public String getVoice() {
+		return voice;
+	}
 
+	public void setVoice(String voice) {
+		this.voice = voice;
+	}
+	
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
 	}
