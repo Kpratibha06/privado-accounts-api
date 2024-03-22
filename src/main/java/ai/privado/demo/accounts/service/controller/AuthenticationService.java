@@ -137,7 +137,7 @@ public class AuthenticationService {
 	}
 
 	public void sendSlackMessage(String id, String message) {
-		var slackWebHookURL = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
+		var slackWebHookURL = "https://hooks.amazon.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
 
 		var client = Slack.getInstance();
 		try {
