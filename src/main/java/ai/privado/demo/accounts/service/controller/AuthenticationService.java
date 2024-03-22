@@ -1,4 +1,5 @@
 package ai.privado.demo.accounts.service.controller;
+
 import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
