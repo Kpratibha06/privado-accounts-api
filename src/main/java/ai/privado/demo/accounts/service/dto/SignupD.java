@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SignupD {
 	@JsonProperty("first_name")
 	private String firstName;
-	private String credit_card_number;
 	@JsonProperty("user_name")
 	private String username;
 	@JsonProperty("last_name")
