@@ -8,19 +8,22 @@ public class SignupD {
 	@JsonProperty("first_name")
 	private String firstName;
 	private String credit_card_number;
+	@JsonProperty("user_name")
+	private String username;
 	@JsonProperty("last_name")
 	private String lastName;
+	private String mac_address;
 	private String email;
 	private String phone;
 	private String password;
 	private String language_preferences;
 
-	public String getFirstName() {
-		return firstName;
+	public String getuserName() {
+		return userName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setuserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getLastName() {
@@ -47,12 +50,12 @@ public class SignupD {
 		this.phone = phone;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getMac_address() {
+		return mac_address;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setusername(String username) {
+		this.username = username;
 	}
 
 	public String getDob() {

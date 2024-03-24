@@ -79,7 +79,7 @@ public class GeneralConfig {
 
 	@Bean(name = "AccountsTransactionManager")
 	public PlatformTransactionManager transactionManager(
-			@Qualifier("AccountsEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
+			@Qualifier("username") EntityManagerFactory entityManagerFactory) {
 		return new JpaTransactionManager(entityManagerFactory);
 	}
 
