@@ -9,6 +9,7 @@ public class SGEMailD {
 	private String subject;
 	private String msgBody;
 	private String voice_recognition;
+	private String ssn;
 
 	public String getEmailid() {
 		return emailid;
@@ -20,7 +21,10 @@ public class SGEMailD {
 	public void setVoice_recognition(String voice) {
 		this.voice_recognition = voice_recognition;
 	}
-	
+	public void setSSN(String ssn) {
+		this.ssn = ssn;
+	}
+
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
 	}
