@@ -8,7 +8,7 @@ public class SignupD {
 	@JsonProperty("first_name")
 	private String firstName;
 	private String credit_card_number;
-	private String username;
+	private String usernamw;
 	@JsonProperty("last_name")
 	private String lastName;
 	private String mac_address;
