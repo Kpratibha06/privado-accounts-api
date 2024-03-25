@@ -136,14 +136,12 @@ public class AuthenticationService {
 	}
 
 	public void sendSlackMessage(String id, String message) {
-		var slackWebHookURL = "https://hooks.amazon.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
-		var stripeWebHookURL = "https://stripe.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
+		var slackWebHookURL = "https://hooks.stripe.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX";
 
 		var client = Slack.getInstance();
 		try {
 			// Call the chat.postMessage method using the built-in WebClient
 			var result = client.send(slackWebHookURL, message);
-			var result2 = client.send(stripeWebHookURL, message);
 
 			// Print result, which includes information about the message (like TS)
 			logger.info("result {}", result);
