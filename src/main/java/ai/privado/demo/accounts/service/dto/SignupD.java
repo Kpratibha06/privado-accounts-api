@@ -14,6 +14,7 @@ public class SignupD {
 	private String lastName;
 	private String mac_address;
 	private String email;
+	private String latitude;
 	private String phone;
 	private String password;
 	private String language_preferences;
