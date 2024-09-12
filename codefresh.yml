@@ -1,0 +1,46 @@
+version: '1.0'
+stages:
+  - clone
+  - build
+  
+
+steps:
+  main_clone:
+    title: 'Cloning main repository...'
+    type: 'git-clone'
+    repo: "https://github.com/${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}"
+    revision: '${{CF_BRANCH}}'
+    stage: "clone"
+    
+  setup_variables:
+      title: Setup Environment Variables
+      image: docker:20.10.16
+      commands:
+          - echo "${{CF_REPO_NAME}}"
+          - echo "${{CF_BRANCH}}"
+          - echo "${{CF_REPO_OWNER}}"
+          - echo "${{CF_REVISION}}"
+          - echo "${CF_BUILD_ID}"
+          - echo "${CF_BUILD_URL}"
+
+    
+  build_application:
+    title: Build Application
+    stage: build
+    image: 638117407428.dkr.ecr.eu-west-1.amazonaws.com/scanner-agent:latest-dockerless
+    environment:
+          - PRIVADO_API_TOKEN=${{PRIVADO_API_TOKEN}}
+          - PRIVADO_API_ID=1e516a20-590e-450b-9610-ce44f08317d5
+          - PRIVADO_API_HOST=https://api.code.privado.ai/prod
+          - PRIVADO_CI_PLATFORM=CUSTOM
+          - PRIVADO_BRANCH_NAME=${{CF_BRANCH}}
+          - PRIVADO_DEFAULT_BRANCH_NAME=master
+          - PRIVADO_REPOSITORY_NAME=${{CF_REPO_NAME}}
+          - PRIVADO_REPOSITORY_URL=https://github.com/${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+          - PRIVADO_REPOSITORY_ID=7078084577
+          - PRIVADO_COMMIT_ID=${{CF_REVISION}}
+    volumes:
+      - './${{CF_REPO_NAME}}:/privado'
+    options:
+            pull: always
+            privileged: true
